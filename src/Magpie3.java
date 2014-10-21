@@ -48,7 +48,23 @@ public class Magpie3
 		else
 		{
 			response = getRandomResponse();
-		}
+		}else if (findKeyword (statement, "soccer") >= 0)
+
+    {
+        response = "I don't know much about soccer.";
+    }
+    else if (findKeyword (statement , "football") >= 0)
+    {
+        response = "I like football.";
+    }
+    else if (findKeyword (statement, "baseball") >= 0)
+    {
+        response = "Baseball is boring.";
+    }
+    else
+    {
+        response = getRandomResponse();
+    }
 		return response;
 	}
 
